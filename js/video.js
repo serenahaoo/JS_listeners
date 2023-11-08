@@ -41,6 +41,20 @@ document.querySelector("#faster").addEventListener("click", function() {
 	console.log(video.playbackRate);
 });
 
+document.querySelector("#skip").addEventListener("click", function() {
+	console.log("Skip Forward");
+
+	video.currentTime += 10;
+
+	console.log(video.currentTime);
+
+	if (video.currentTime >= 68.926){
+		video.currentTime = 0;
+	}
+	video.play();
+
+});
+
 document.querySelector("#mute").addEventListener("click", function() {
 	
 	if(document.getElementById("mute").innerHTML == "Mute"){
